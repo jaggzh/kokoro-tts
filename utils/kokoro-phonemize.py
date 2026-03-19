@@ -558,7 +558,7 @@ def show_sentence(sentence, heteronyms_only=False, show_all=False, annotate=Fals
     if not have_spacy:
         hint_parts.append('no POS — all variants shown')
     if hint_parts:
-        out.p(dim(f'\n  [{", ".join(hint_parts)} — use -H for heteronyms only, [bracket] for specific words]'))
+        out.p(dim(f'\n  [{", ".join(hint_parts)} — use -H for heteronyms only, [bracket] for specific words, --all for a verbose output.]'))
 
     out.p(f'\nSentence: {sentence}\n')
 
@@ -716,20 +716,20 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  kp lead                                 All pronunciations of "lead"
-  kp "word1" "word2"                      Each word looked up individually
-  kp "sentence"                           Heteronyms in sentence detected
-  kp "sentence" --all                     All words: pronunciations + POS
-  kp "sentence" -H                        Heteronyms only
-  kp "sentence" --all -H                  All heteronym variants, POS shown
-  kp "I want a [dog]"                     Bracket = request pronunciation
-  kp "The [dog] won a contest." -H        Brackets imply -H for the rest
-  kp "sentence" --annotate                Output with [word](/phonemes/) inline
-  kp --list                               Educational heteronym reference
-  kp --key                                Paste-ready Misaki guide for LLMs
-  kp --key --cb                           Same, copied to clipboard
-  kp "sentence" --cb                      Output + copy to clipboard
-  kp "sentence" -C                        Disable colour
+  kp lead                            All pronunciations of "lead"
+  kp "word1" "word2"                 Each word looked up individually
+  kp "sentence"                      **Heteronyms only** (to reduce default output)
+  kp "sentence" -A (or --all)        Force ALL words/phrases: pronunciations + POS
+  kp "sentence" -H                   Heteronyms only
+  kp "sentence" --all -H             All heteronym variants, POS shown
+  kp "I want a [dog]"                Bracket = request pronunciation
+  kp "The [dog] won a contest." -H   Brackets imply -H for the rest
+  kp "sentence" --annotate           Output with [word](/phonemes/) inline
+  kp --list                          Educational heteronym reference
+  kp --key                           Paste-ready Misaki guide for LLMs
+  kp --key --cb                      Same, copied to clipboard
+  kp "sentence" --cb                 Output + copy to clipboard
+  kp "sentence" -C                   Disable colour
         """
     )
     parser.add_argument('words', nargs='*',
