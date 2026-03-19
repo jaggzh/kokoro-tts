@@ -156,6 +156,10 @@ class Entry:
 
 HETERONYMS = {
 
+    # -----------------------------------------------------------------------
+    # Vowel-change heteronyms (completely different vowels)
+    # -----------------------------------------------------------------------
+
     'read': Entry('read',
         definition="Present tense rhymes with 'reed'; past tense rhymes with 'red'.",
         pronunciations=[
@@ -205,6 +209,49 @@ HETERONYMS = {
             Pronunciation('klOz',  'verb – to shut, to end',                 'rhymes with "those"', '/kloʊz/', 'Please close the door.'),
         ]),
 
+    # -----------------------------------------------------------------------
+    # Noun=/s/ verb=/z/ voicing pairs
+    # -----------------------------------------------------------------------
+
+    'use': Entry('use',
+        definition="The noun (a purpose) ends in soft /s/; the verb (to employ) ends in /z/.",
+        pronunciations=[
+            Pronunciation('jus',  'noun – a purpose or function',            'rhymes with "goose"',  '/juːs/', 'What is the use of that?'),
+            Pronunciation('juz',  'verb – to employ or make use of',         'rhymes with "ooze"',   '/juːz/', 'Use the right tool.'),
+        ]),
+
+    'house': Entry('house',
+        definition="A building ends in soft /s/; to provide accommodation ends in /z/.",
+        pronunciations=[
+            Pronunciation('hWs',  'noun – a building to live in',            'rhymes with "mouse"',  '/haʊs/', 'They bought a new house.'),
+            Pronunciation('hWz',  'verb – to provide accommodation for',     'rhymes with "cows"',   '/haʊz/', 'The shelter houses fifty people.'),
+        ]),
+
+    'abuse': Entry('abuse',
+        definition="The noun (mistreatment) ends in soft /s/; the verb (to mistreat) ends in /z/.",
+        pronunciations=[
+            Pronunciation('əbjˈus',  'noun – mistreatment, cruel language',  'uh-BYOOSS',  '/əˈbjuːs/', 'The report documented years of abuse.'),
+            Pronunciation('əbjˈuz',  'verb – to mistreat, to misuse',        'uh-BYOOZZ',  '/əˈbjuːz/', "Don't abuse the privilege."),
+        ]),
+
+    'excuse': Entry('excuse',
+        definition="The noun (a reason given) ends in soft /s/; the verb (to pardon) ends in /z/.",
+        pronunciations=[
+            Pronunciation('ɪkskjˈus',  'noun – a reason offered to justify', 'ek-SKYOOSS',  '/ɪksˈkjuːs/', "That's a weak excuse."),
+            Pronunciation('ɪkskjˈuz',  'verb – to pardon, to release from',  'ek-SKYOOZZ',  '/ɪksˈkjuːz/', 'Please excuse the interruption.'),
+        ]),
+
+    'diffuse': Entry('diffuse',
+        definition="The adjective (spread out) ends in soft /s/; the verb (to spread) ends in /z/.",
+        pronunciations=[
+            Pronunciation('dɪfjˈus',  'adjective – spread widely, not concentrated', 'dih-FYOOSS', '/dɪˈfjuːs/', 'A diffuse glow filled the room.'),
+            Pronunciation('dɪfjˈuz',  'verb – to spread or scatter widely',           'dih-FYOOZZ', '/dɪˈfjuːz/', 'Plants diffuse oxygen into the air.'),
+        ]),
+
+    # -----------------------------------------------------------------------
+    # Stress-shift: first syllable = noun/adj, second syllable = verb
+    # -----------------------------------------------------------------------
+
     'present': Entry('present',
         definition="Noun/adjective stresses first syllable; verb stresses second.",
         pronunciations=[
@@ -226,20 +273,6 @@ HETERONYMS = {
             Pronunciation('ɹɪfjˈuz',  'verb – to say no, to decline',        'reh-FYOOZ',           "/ɹɪˈfjuːz/", 'I refuse to lie.'),
         ]),
 
-    'minute': Entry('minute',
-        definition="The time unit is MIN-it; the adjective meaning tiny is my-NYOOT.",
-        pronunciations=[
-            Pronunciation('mˈɪnᵻt',   'noun – 60 seconds, a moment',         'MIN-it',              "/ˈmɪnɪt/",   'Wait just a minute.'),
-            Pronunciation('mInjˈut',   'adjective – extremely small, tiny',    'my-NYOOT',            "/maɪˈnjuːt/", 'A minute speck of dust.'),
-        ]),
-
-    'object': Entry('object',
-        definition="Noun (a thing) stresses first syllable; verb (to protest) stresses second.",
-        pronunciations=[
-            Pronunciation('ˈɑbʤɛkt',  'noun – a physical thing',             'OB-ject',             "/ˈɒbdʒɛkt/", 'What is that object?'),
-            Pronunciation('əbʤˈɛkt',  'verb – to protest or disagree',       'ob-JECT',             "/əbˈdʒɛkt/", 'I object to that claim.'),
-        ]),
-
     'permit': Entry('permit',
         definition="Noun (official pass) stresses first syllable; verb (to allow) stresses second.",
         pronunciations=[
@@ -259,6 +292,13 @@ HETERONYMS = {
         pronunciations=[
             Pronunciation('pɹˈɑʤɛkt',  'noun – a plan or undertaking',       'PRO-ject',            "/ˈpɹɒdʒɛkt/", 'Our project is due Friday.'),
             Pronunciation('pɹəʤˈɛkt',  'verb – to display, to cast forward', 'pro-JECT',            "/pɹəˈdʒɛkt/", 'Project the slides onto the wall.'),
+        ]),
+
+    'object': Entry('object',
+        definition="Noun (a thing) stresses first syllable; verb (to protest) stresses second.",
+        pronunciations=[
+            Pronunciation('ˈɑbʤɛkt',  'noun – a physical thing',             'OB-ject',             "/ˈɒbdʒɛkt/", 'What is that object?'),
+            Pronunciation('əbʤˈɛkt',  'verb – to protest or disagree',       'ob-JECT',             "/əbˈdʒɛkt/", 'I object to that claim.'),
         ]),
 
     'desert': Entry('desert',
@@ -288,6 +328,143 @@ HETERONYMS = {
             Pronunciation('ˈɪnkɹis',   'noun – a rise or growth',            'IN-crease',           "/ˈɪŋkɹiːs/", 'A significant increase in sales.'),
             Pronunciation('ɪnkɹˈis',   'verb – to grow, to make larger',     'in-CREASE',           "/ɪŋˈkɹiːs/", 'Prices will increase next year.'),
         ]),
+
+    'upset': Entry('upset',
+        definition="Noun/adjective stresses first syllable; verb stresses second.",
+        pronunciations=[
+            Pronunciation('ˈʌpsɛt',  'noun – surprise defeat / adj – distressed', 'UP-set', "/ˈʌpsɛt/", 'That was a major upset.'),
+            Pronunciation('ʌpsˈɛt',  'verb – to disturb or overturn',             'up-SET', "/ʌpˈsɛt/", "Don't upset the balance."),
+        ]),
+
+    'produce': Entry('produce',
+        definition="Noun (fresh food) stresses first syllable; verb (to make) stresses second.",
+        pronunciations=[
+            Pronunciation('pɹˈOdus',  'noun – fresh fruit and vegetables',   'PRO-duce',  "/ˈpɹoʊduːs/", 'Buy your produce at the farmers market.'),
+            Pronunciation('pɹᵻdˈus',  'verb – to make, create, or manufacture', 'pro-DUCE', "/pɹəˈduːs/", 'The factory produces a thousand units daily.'),
+        ]),
+
+    'protest': Entry('protest',
+        definition="Noun (a demonstration) stresses first syllable; verb (to object) stresses second.",
+        pronunciations=[
+            Pronunciation('pɹˈOtɛst',  'noun – a public demonstration or objection', 'PRO-test', "/ˈpɹoʊtɛst/", 'Thousands attended the protest.'),
+            Pronunciation('pɹətˈɛst',  'verb – to object or demonstrate against',    'pro-TEST', "/pɹəˈtɛst/", 'They gathered to protest the decision.'),
+        ]),
+
+    'progress': Entry('progress',
+        definition="Noun (advancement) stresses first syllable; verb (to advance) stresses second.",
+        pronunciations=[
+            Pronunciation('pɹˈɑɡɹᵻs',  'noun – forward movement or development', 'PROG-ress', "/ˈpɹɑːɡɹɛs/", 'We made real progress today.'),
+            Pronunciation('pɹəɡɹˈɛs',  'verb – to move forward or develop',      'pro-GRESS', "/pɹəˈɡɹɛs/", 'The work will progress quickly.'),
+        ]),
+
+    'rebel': Entry('rebel',
+        definition="Noun (a person who resists) stresses first syllable; verb (to resist) stresses second.",
+        pronunciations=[
+            Pronunciation('ɹˈɛbᵻl',  'noun – a person who resists authority', 'REB-el', "/ˈɹɛbəl/", 'She was known as a rebel.'),
+            Pronunciation('ɹɪbˈɛl',  'verb – to resist or rise up against',   'reh-BEL', "/ɹɪˈbɛl/", 'Young people often rebel against rules.'),
+        ]),
+
+    'subject': Entry('subject',
+        definition="Noun/adjective stresses first syllable; verb (to expose or submit) stresses second.",
+        pronunciations=[
+            Pronunciation('sˈʌbʤᵻkt',  'noun – a topic / grammar subject / citizen',  'SUB-ject', "/ˈsʌbdʒɪkt/", "What's the subject of the essay?"),
+            Pronunciation('səbʤˈɛkt',  'verb – to expose or cause to undergo',         'sub-JECT', "/səbˈdʒɛkt/", "Don't subject them to unnecessary risk."),
+        ]),
+
+    'suspect': Entry('suspect',
+        definition="Noun/adjective stresses first syllable; verb (to believe guilty) stresses second.",
+        pronunciations=[
+            Pronunciation('sˈʌspᵻkt',  'noun – a person under suspicion / adj – doubtful', 'SUS-pect', "/ˈsʌspɪkt/", 'The suspect was released.'),
+            Pronunciation('səspˈɛkt',  'verb – to believe to be guilty or likely',          'sus-PECT', "/səˈspɛkt/", 'I suspect it will rain.'),
+        ]),
+
+    'conflict': Entry('conflict',
+        definition="Noun (a struggle) stresses first syllable; verb (to clash) stresses second.",
+        pronunciations=[
+            Pronunciation('kˈɑnflɪkt',  'noun – a disagreement or battle',         'CON-flict', "/ˈkɒnflɪkt/", 'The conflict lasted three years.'),
+            Pronunciation('kənflˈɪkt',  'verb – to be incompatible or to clash',   'con-FLICT', "/kənˈflɪkt/", 'These schedules conflict with each other.'),
+        ]),
+
+    'contract': Entry('contract',
+        definition="Noun (a legal agreement) stresses first syllable; verb (to shrink or agree) stresses second.",
+        pronunciations=[
+            Pronunciation('kˈɑntɹækt',  'noun – a legally binding agreement',              'CON-tract', "/ˈkɒntɹækt/", 'Sign the contract before Friday.'),
+            Pronunciation('kəntɹˈækt',  'verb – to shrink / to catch an illness / to hire', 'con-TRACT', "/kənˈtɹækt/", 'Cold metal contracts as it cools.'),
+        ]),
+
+    'contrast': Entry('contrast',
+        definition="Noun (a difference) stresses first syllable; verb (to compare differences) stresses second.",
+        pronunciations=[
+            Pronunciation('kˈɑntɹæst',  'noun – a striking difference',             'CON-trast', "/ˈkɒntɹɑːst/", 'The contrast between them was stark.'),
+            Pronunciation('kəntɹˈæst',  'verb – to compare or highlight differences','con-TRAST', "/kənˈtɹɑːst/", 'Contrast the two approaches.'),
+        ]),
+
+    'convert': Entry('convert',
+        definition="Noun (a person who has changed beliefs) stresses first syllable; verb stresses second.",
+        pronunciations=[
+            Pronunciation('kˈɑnvɜɹt',  'noun – a person who has changed beliefs or religion', 'CON-vert', "/ˈkɒnvɜːt/", 'He became a convert to the cause.'),
+            Pronunciation('kənvˈɜɹt',  'verb – to change form, belief, or function',          'con-VERT', "/kənˈvɜːt/", 'Convert the file to PDF.'),
+        ]),
+
+    'convict': Entry('convict',
+        definition="Noun (a prisoner) stresses first syllable; verb (to find guilty) stresses second.",
+        pronunciations=[
+            Pronunciation('kˈɑnvɪkt',  'noun – a person serving a prison sentence',  'CON-vict', "/ˈkɒnvɪkt/", 'An escaped convict was on the loose.'),
+            Pronunciation('kənvˈɪkt',  'verb – to find guilty in a court of law',    'con-VICT', "/kənˈvɪkt/", 'The jury voted to convict.'),
+        ]),
+
+    'export': Entry('export',
+        definition="Noun (a product sent abroad) stresses first syllable; verb stresses second.",
+        pronunciations=[
+            Pronunciation('ˈɛkspOɹt',  'noun – a good sold and sent to another country', 'EX-port', "/ˈɛkspɔːt/", 'Oil is the country\'s main export.'),
+            Pronunciation('ɛkspˈOɹt',  'verb – to send goods abroad for sale',           'ex-PORT', "/ɪkˈspɔːt/", 'They export timber to Europe.'),
+        ]),
+
+    'import': Entry('import',
+        definition="Noun (a good brought from abroad) stresses first syllable; verb stresses second.",
+        pronunciations=[
+            Pronunciation('ˈɪmpOɹt',  'noun – a good brought in from another country', 'IM-port', "/ˈɪmpɔːt/", 'Cheap imports flooded the market.'),
+            Pronunciation('ɪmpˈOɹt',  'verb – to bring in from another country',       'im-PORT', "/ɪmˈpɔːt/", 'They import coffee from Colombia.'),
+        ]),
+
+    'insert': Entry('insert',
+        definition="Noun (something placed inside) stresses first syllable; verb stresses second.",
+        pronunciations=[
+            Pronunciation('ˈɪnsɜɹt',  'noun – a thing placed inside something else',  'IN-sert', "/ˈɪnsɜːt/", 'Remove the insert from the envelope.'),
+            Pronunciation('ɪnsˈɜɹt',  'verb – to place something inside',             'in-SERT', "/ɪnˈsɜːt/", 'Insert the key into the lock.'),
+        ]),
+
+    'insult': Entry('insult',
+        definition="Noun (an offensive remark) stresses first syllable; verb (to offend) stresses second.",
+        pronunciations=[
+            Pronunciation('ˈɪnsʌlt',  'noun – an offensive remark or action', 'IN-sult', "/ˈɪnsʌlt/", "That comment was a deliberate insult."),
+            Pronunciation('ɪnsˈʌlt',  'verb – to offend or disrespect',       'in-SULT', "/ɪnˈsʌlt/", "Don't insult the host."),
+        ]),
+
+    'transfer': Entry('transfer',
+        definition="Noun (a movement from one place to another) stresses first syllable; verb stresses second.",
+        pronunciations=[
+            Pronunciation('tɹˈænsfɜɹ',  'noun – a movement or change of location/ownership', 'TRANS-fer', "/ˈtɹænsfɜː/", 'The transfer was completed at midnight.'),
+            Pronunciation('tɹænsfˈɜɹ',  'verb – to move or hand over to another',            'trans-FER', "/tɹænsˈfɜː/", 'Transfer the funds to the new account.'),
+        ]),
+
+    'survey': Entry('survey',
+        definition="Noun (a study or measurement) stresses first syllable; verb (to examine) stresses second.",
+        pronunciations=[
+            Pronunciation('sˈɜɹvA',  'noun – a study, poll, or land measurement', 'SUR-vey', "/ˈsɜːveɪ/", 'The survey revealed widespread concern.'),
+            Pronunciation('sɜɹvˈA',  'verb – to examine or measure systematically', 'sur-VEY', "/sɜːˈveɪ/", 'Engineers will survey the site tomorrow.'),
+        ]),
+
+    'escort': Entry('escort',
+        definition="Noun (a companion or guard) stresses first syllable; verb (to accompany) stresses second.",
+        pronunciations=[
+            Pronunciation('ˈɛskOɹt',  'noun – a person or group accompanying another', 'ES-cort', "/ˈɛskɔːt/", 'A police escort led the motorcade.'),
+            Pronunciation('ɪskˈOɹt',  'verb – to accompany for protection or courtesy', 'es-CORT', "/ɪˈskɔːt/", 'He offered to escort her to the door.'),
+        ]),
+
+    # -----------------------------------------------------------------------
+    # Stress-shift: ambiguous — cannot resolve from POS alone
+    # -----------------------------------------------------------------------
 
     'row': Entry('row',
         note="The argument sense (rhymes with 'now') is chiefly British English.",
@@ -333,12 +510,124 @@ HETERONYMS = {
             Pronunciation('pˈʌtɪŋ', 'verb – making a short golf stroke',    'rhymes with "cutting"', "/ˈpʌtɪŋ/", 'He spent an hour putting on the green.'),
         ]),
 
-    'upset': Entry('upset',
-        definition="Noun/adjective stresses first syllable; verb stresses second.",
+    # -----------------------------------------------------------------------
+    # -ate suffix: noun/adj = reduced /ɪt/, verb = full /eɪt/
+    # -----------------------------------------------------------------------
+
+    'graduate': Entry('graduate',
+        definition="As a noun or adjective, the final syllable is reduced to /ɪt/. As a verb, it is the full /eɪt/.",
         pronunciations=[
-            Pronunciation('ˈʌpsɛt',  'noun – surprise defeat / adj – distressed', 'UP-set', "/ˈʌpsɛt/", 'That was a major upset.'),
-            Pronunciation('ʌpsˈɛt',  'verb – to disturb or overturn',             'up-SET', "/ʌpˈsɛt/", "Don't upset the balance."),
+            Pronunciation('ɡɹˈæʤuᵻt', 'noun/adj – a person who has earned a degree', 'GRAD-yoo-it', "/ˈɡɹædʒuɪt/", 'She is a graduate of MIT.'),
+            Pronunciation('ɡɹˈæʤuAt', 'verb – to complete a degree programme',        'GRAD-yoo-ayt', "/ˈɡɹædʒueɪt/", 'He will graduate in June.'),
         ]),
+
+    'separate': Entry('separate',
+        definition="As a noun or adjective, the final syllable is reduced. As a verb, it rhymes with 'rate'.",
+        pronunciations=[
+            Pronunciation('sˈɛpɹᵻt', 'noun/adj – not joined; an individual item',    'SEP-rit',   "/ˈsɛpɹɪt/",   'Keep them in separate boxes.'),
+            Pronunciation('sˈɛpɹAt', 'verb – to divide or move apart',               'SEP-rayt',  "/ˈsɛpɹeɪt/",  'Separate the egg whites from the yolks.'),
+        ]),
+
+    'moderate': Entry('moderate',
+        definition="As a noun or adjective, the final syllable is reduced. As a verb, it rhymes with 'rate'.",
+        pronunciations=[
+            Pronunciation('mˈɑdɹᵻt', 'noun/adj – not extreme; a middle-ground person', 'MOD-rit',   "/ˈmɒdɹɪt/",  'He holds moderate political views.'),
+            Pronunciation('mˈɑdɹAt', 'verb – to preside over; to lessen in intensity', 'MOD-rayt',  "/ˈmɒdɹeɪt/", 'She will moderate the debate.'),
+        ]),
+
+    'estimate': Entry('estimate',
+        definition="As a noun, the final syllable is reduced to /ɪt/. As a verb, it ends in /eɪt/.",
+        pronunciations=[
+            Pronunciation('ˈɛstᵻmᵻt', 'noun – an approximate calculation or judgement', 'ES-ti-mit',  "/ˈɛstɪmɪt/",  "The estimate came in under budget."),
+            Pronunciation('ˈɛstᵻmAt', 'verb – to calculate or judge approximately',     'ES-ti-mayt', "/ˈɛstɪmeɪt/", 'Experts estimate it will take a year.'),
+        ]),
+
+    'advocate': Entry('advocate',
+        definition="As a noun (a supporter or lawyer), the final syllable is /ɪt/. As a verb, it ends in /eɪt/.",
+        pronunciations=[
+            Pronunciation('ˈædvᵻkᵻt', 'noun – a supporter; a lawyer who pleads in court', 'AD-vo-kit',  "/ˈædvəkɪt/",  'She is a passionate advocate for reform.'),
+            Pronunciation('ˈædvᵻkAt', 'verb – to publicly support or recommend',          'AD-vo-kayt', "/ˈædvəkeɪt/", 'They advocate for better public transport.'),
+        ]),
+
+    'delegate': Entry('delegate',
+        definition="As a noun (a representative), the final syllable is /ɪt/. As a verb (to assign), it ends in /eɪt/.",
+        pronunciations=[
+            Pronunciation('dˈɛlᵻɡᵻt', 'noun – a representative chosen to act for others', 'DEL-eh-git',  "/ˈdɛlɪɡɪt/",  'Each country sent a delegate.'),
+            Pronunciation('dˈɛlᵻɡAt', 'verb – to assign a task or responsibility to another', 'DEL-eh-gayt', "/ˈdɛlɪɡeɪt/", 'Learn to delegate effectively.'),
+        ]),
+
+    'elaborate': Entry('elaborate',
+        definition="As an adjective (detailed or complex), the final syllable is /ɪt/. As a verb (to expand on), it ends in /eɪt/.",
+        pronunciations=[
+            Pronunciation('ɪlˈæbɹᵻt', 'adj – highly detailed, intricate, or complex',    'eh-LAB-rit',  "/ɪˈlæbɹɪt/",  'The set design was elaborate.'),
+            Pronunciation('ɪlˈæbɹAt', 'verb – to give more detail or expand on something', 'eh-LAB-rayt', "/ɪˈlæbɹeɪt/", 'Could you elaborate on that point?'),
+        ]),
+
+    # -----------------------------------------------------------------------
+    # -ed: verb past tense = one syllable; adjective = two syllables
+    # -----------------------------------------------------------------------
+
+    'aged': Entry('aged',
+        definition="As a verb (past tense of 'age'), it is one syllable. As an adjective meaning elderly, it is two syllables.",
+        pronunciations=[
+            Pronunciation('Ajd',    "verb – past tense of 'age': matured",      'one syllable: ayjd', '/eɪdʒd/', 'The whisky aged in oak barrels.'),
+            Pronunciation('ˈAjᵻd', 'adj – old or elderly; of a specified age', 'two syllables: AY-jid', "/ˈeɪdʒɪd/", 'She cared for her aged parents.'),
+        ]),
+
+    'blessed': Entry('blessed',
+        definition="As a verb (past tense of 'bless'), one syllable. As an adjective (holy, fortunate), two syllables.",
+        pronunciations=[
+            Pronunciation('blɛst',    "verb – past tense of 'bless'",                  'one syllable: blest',    '/blɛst/',     'The priest blessed the congregation.'),
+            Pronunciation('blˈɛsᵻd', 'adj – holy, consecrated, or deeply fortunate',  'two syllables: BLES-sid', "/ˈblɛsɪd/", 'They lived a blessed life.'),
+        ]),
+
+    'learned': Entry('learned',
+        definition="As a verb (past tense of 'learn'), one syllable. As an adjective meaning scholarly, two syllables.",
+        pronunciations=[
+            Pronunciation('lɜɹnd',    "verb – past tense of 'learn'",               'one syllable: lernd',    '/lɜːnd/',    'She learned quickly.'),
+            Pronunciation('lˈɜɹnᵻd', 'adj – having great knowledge, scholarly',    'two syllables: LER-nid', "/ˈlɜːnɪd/", 'He was a learned professor.'),
+        ]),
+
+    'dogged': Entry('dogged',
+        definition="As a verb (past tense of 'dog'), one syllable. As an adjective meaning tenacious, two syllables.",
+        pronunciations=[
+            Pronunciation('dˈɑɡd',   "verb – past tense of 'dog': to follow persistently", 'one syllable: dogd',    '/dɒɡd/',    'Bad luck has dogged him for years.'),
+            Pronunciation('dˈɑɡᵻd', 'adj – stubbornly persistent, tenacious',              'two syllables: DOG-id', "/ˈdɒɡɪd/", 'Her dogged determination paid off.'),
+        ]),
+
+    'beloved': Entry('beloved',
+        definition="As a verb (past tense), two syllables. As an adjective or noun in formal/literary use, three syllables.",
+        pronunciations=[
+            Pronunciation('bɪlˈʌvd',   "verb – past tense: was loved",                   'two syllables: bih-LUVD',    '/bɪˈlʌvd/',  'She was beloved by all who knew her.'),
+            Pronunciation('bɪlˈʌvᵻd', 'adj/noun – deeply loved (formal, literary, religious)', 'three syllables: bih-LUV-id', "/bɪˈlʌvɪd/", 'Dearly beloved, we are gathered here.'),
+        ]),
+
+    # -----------------------------------------------------------------------
+    # Miscellaneous
+    # -----------------------------------------------------------------------
+
+    'minute': Entry('minute',
+        definition="The time unit is MIN-it; the adjective meaning tiny is my-NYOOT.",
+        pronunciations=[
+            Pronunciation('mˈɪnᵻt',   'noun – 60 seconds, a moment',         'MIN-it',              "/ˈmɪnɪt/",   'Wait just a minute.'),
+            Pronunciation('mInjˈut',   'adjective – extremely small, tiny',    'my-NYOOT',            "/maɪˈnjuːt/", 'A minute speck of dust.'),
+        ]),
+
+    'invalid': Entry('invalid',
+        definition="The adjective (not valid/null) stresses second syllable; the noun (a sick person, archaic) stresses first.",
+        pronunciations=[
+            Pronunciation('ɪnvˈælɪd', 'adj – not valid, null, without legal force', 'in-VAL-id', "/ɪnˈvælɪd/", 'Your ticket is invalid after midnight.'),
+            Pronunciation('ˈɪnvᵻlᵻd', 'noun – a person weakened by illness (dated)', 'IN-va-lid', "/ˈɪnvəlɪd/", 'He returned from the war as an invalid.'),
+        ]),
+
+    'number': Entry('number',
+        note="'More numb' is recognised in dictionaries but rarely used in practice.",
+        definition="A numeral rhymes with 'plumber'; the comparative of 'numb' rhymes with 'hummer' with a different vowel.",
+        pronunciations=[
+            Pronunciation('nˈʌmbɜɹ', 'noun/verb – a numeral; to assign numbers to', 'NUM-ber (rhymes with "plumber")', '/ˈnʌmbɜː/', 'What number are you thinking of?'),
+            Pronunciation('nˈʌmɜɹ',  'adj – more numb, having less feeling',        'NUM-er (no b sound)',             '/ˈnʌmɜː/',  "My fingers grew number in the cold."),
+        ]),
+
 }
 
 # ---------------------------------------------------------------------------
@@ -346,8 +635,10 @@ HETERONYMS = {
 # ---------------------------------------------------------------------------
 
 def _select_index(word, pos, tag):
-    """Return index of best pronunciation, or -1 if ambiguous."""
+    """Return the index of the best pronunciation for the given POS, or -1 if ambiguous."""
     w = word.lower()
+
+    # ---- Special cases: verb tense / POS determines vowel, not just stress ----
     if w == 'read':
         return 1 if tag in ('VBD', 'VBN') else 0
     if w == 'lead':
@@ -360,13 +651,43 @@ def _select_index(word, pos, tag):
         return 0 if pos in ('ADJ', 'ADV') else 1
     if w == 'minute':
         return 1 if pos == 'ADJ' else 0
-    if w in ('present', 'record', 'refuse', 'object', 'permit',
-             'conduct', 'project', 'desert', 'content', 'contest',
-             'increase', 'upset'):
+    if w == 'invalid':
+        return 0 if pos == 'ADJ' else (1 if pos == 'NOUN' else -1)
+    if w == 'number':
+        return 1 if pos == 'ADJ' else 0
+    if w == 'beloved':
+        return 0 if tag in ('VBD', 'VBN') else (1 if pos == 'ADJ' else -1)
+
+    # ---- noun=/s/ verb=/z/ voicing pairs ----
+    if w in ('use', 'house', 'abuse', 'excuse', 'diffuse'):
         return 0 if pos == 'NOUN' else (1 if pos == 'VERB' else -1)
-    # Semantically ambiguous — cannot resolve from POS alone
-    if w in ('row', 'bow', 'sow', 'bass', 'dove', 'putting'):
+
+    # ---- -ate suffix: noun/adj = reduced /ɪt/, verb = full /eɪt/ ----
+    if w in ('graduate', 'separate', 'moderate', 'estimate', 'advocate',
+             'delegate', 'elaborate'):
+        return 0 if pos in ('NOUN', 'ADJ') else (1 if pos == 'VERB' else -1)
+
+    # ---- -ed: verb past tense = 1 syllable, adjective = 2 syllables ----
+    if w in ('aged', 'blessed', 'learned', 'dogged'):
+        return 0 if tag in ('VBD', 'VBN') else (1 if pos == 'ADJ' else -1)
+
+    # ---- Standard noun-stress / verb-stress shift ----
+    if w in (
+        'present', 'record', 'refuse', 'object', 'permit',
+        'conduct', 'project', 'desert', 'content', 'contest',
+        'increase', 'upset',
+        'produce', 'protest', 'progress', 'rebel',
+        'subject', 'suspect',
+        'conflict', 'contract', 'contrast', 'convert', 'convict',
+        'export', 'import', 'insert', 'insult', 'transfer',
+        'survey', 'escort',
+    ):
+        return 0 if pos == 'NOUN' else (1 if pos == 'VERB' else -1)
+
+    # ---- Semantically ambiguous: cannot resolve from POS alone ----
+    if w in ('row', 'bow', 'sow', 'bass', 'dove', 'putting', 'number'):
         return -1
+
     return -1
 
 # ---------------------------------------------------------------------------
@@ -480,6 +801,10 @@ def show_sentence(sentence, heteronyms_only=False, show_all=False, annotate=Fals
       -H               — heteronyms only (no other words)
       --all -H         — all heteronym variants, POS shown
       [brackets]       — always included regardless of -H
+
+    Deduplication is by (word, chosen_idx) so the same word
+    appearing twice with different POS (e.g. "close the door, stand close")
+    will be shown twice with its respective resolved pronunciation.
     """
     bracketed_words = set(w.lower() for w in _extract_bracketed(sentence))
     # Brackets present → implies heteronym mode for the rest (user said so)
@@ -503,22 +828,29 @@ def show_sentence(sentence, heteronyms_only=False, show_all=False, annotate=Fals
             if word:
                 tokens.append((word, '', ''))
 
-    # Build findings list
-    findings = []  # (word_text, entry_or_None, chosen_idx, source, pos_tag_str)
-    seen = set()
+    # Build findings list.
+    # Deduplication is by (word_lower, chosen_idx) so that the same word
+    # appearing in different grammatical roles (e.g. "close" as verb vs
+    # adjective) is shown separately if it resolves to a different pronunciation.
+    findings = []
+    seen_keys = set()   # (word_lower, chosen_idx) pairs already added
 
     for word_text, pos, tag in tokens:
         w = word_text.lower()
-        if w in seen:
-            continue
-        seen.add(w)
 
         is_bracketed = (w in bracketed_words)
         entry = _lookup_token(w)
         is_heteronym = entry is not None
 
+        # Compute idx before dedup check so we can dedup on (word, idx)
+        idx = _select_index(w, pos, tag) if is_heteronym and have_spacy else -1
+
+        dedup_key = (w, idx)
+        if dedup_key in seen_keys:
+            continue
+        seen_keys.add(dedup_key)
+
         if show_all:
-            # Include every token
             pass
         elif heteronyms_only:
             if not is_heteronym and not is_bracketed:
@@ -528,7 +860,6 @@ def show_sentence(sentence, heteronyms_only=False, show_all=False, annotate=Fals
             if not is_heteronym and not is_bracketed:
                 continue
 
-        idx = _select_index(w, pos, tag) if is_heteronym and have_spacy else -1
         pos_label = f'{pos}/{tag}' if pos else ''
         source = ('both'      if is_bracketed and is_heteronym else
                   'bracketed' if is_bracketed else
@@ -552,7 +883,7 @@ def show_sentence(sentence, heteronyms_only=False, show_all=False, annotate=Fals
     het_count  = sum(1 for f in findings if f[3] in ('heteronym','both'))
     hint_parts = []
     if not show_all and het_count:
-        hint_parts.append(f'{het_count} heteronym{"s" if het_count!=1 else ""} detected')
+        hint_parts.append(f'{het_count} heteronym instance{"s" if het_count!=1 else ""} detected')
     if show_all:
         hint_parts.append(f'{word_count} words')
     if not have_spacy:
@@ -576,20 +907,16 @@ def show_sentence(sentence, heteronyms_only=False, show_all=False, annotate=Fals
         if entry is not None:
             if entry.definition:
                 out.p(f'    {dim(entry.definition)}')
+            if entry.note:
+                out.p(f'    {dim("note: " + entry.note)}')
 
-            if show_all and source in ('heteronym', 'both', 'all'):
-                # Show ALL variants; mark the chosen one
-                for i, p in enumerate(entry.pronunciations):
-                    chosen = (i == idx)
-                    pos_note = pos_label if chosen and pos_label else None
-                    out.p('  ' + _fmt_pron(word_text, p, chosen=chosen, show_pos_tag=pos_note))
-            elif idx >= 0:
-                p = entry.pronunciations[idx]
-                out.p('    → ' + _fmt_pron(word_text, p, chosen=True, show_pos_tag=pos_label or None))
-            else:
-                out.p(f'    → {dim("ambiguous — all variants:")}')
-                for p in entry.pronunciations:
-                    out.p('      ' + _fmt_pron(word_text, p))
+            # Always show all variants; mark the POS-resolved choice with ▶.
+            # Previously the unchosen variant was hidden when idx >= 0, which
+            # made it impossible to verify or copy-paste the alternative.
+            for i, p in enumerate(entry.pronunciations):
+                chosen = (i == idx)
+                pos_note = pos_label if chosen and pos_label else None
+                out.p('  ' + _fmt_pron(word_text, p, chosen=chosen, show_pos_tag=pos_note))
 
         else:
             # Not a heteronym — espeak fallback
@@ -605,7 +932,7 @@ def show_sentence(sentence, heteronyms_only=False, show_all=False, annotate=Fals
         result = clean
         for word_text, entry, idx, source, _ in sorted(findings, key=lambda x: -len(x[0])):
             if entry is not None:
-                misaki = entry.pronunciations[max(idx,0)].misaki
+                misaki = entry.pronunciations[max(idx, 0)].misaki
             else:
                 misaki = _espeak_fallback(word_text) or '?'
             replacement = f'[{word_text}](/{misaki}/)'
@@ -688,18 +1015,64 @@ a  ash (Brit)  Q = əʊ  (go-Brit)  ɒ  on             ː  vowel extender
 ## Custom
 ᵊ  small schwa (pixel => pˈɪksᵊl)
 
-## Common heteronyms
+## Noun=/s/ vs verb=/z/ pairs (very common TTS error)
+use     noun: jus           | verb: juz
+house   noun: hWs           | verb: hWz
+abuse   noun: əbjˈus        | verb: əbjˈuz
+excuse  noun: ɪkskjˈus      | verb: ɪkskjˈuz
+close   adj(nearby): klOs   | verb(shut): klOz
+refuse  noun(garbage): ɹˈɛfjus | verb(decline): ɹɪfjˈuz
+
+## Vowel-change heteronyms
 read  verb-present: ɹid  |  verb-past: ɹɛd
 lead  verb: lid           |  noun(metal)/past: lɛd
 tear  noun(eye): tɪɹ      |  verb(rip): tɛɹ
 live  verb: lɪv           |  adj(broadcast): lIv
-close adj(nearby): klOs   |  verb(shut): klOz
 wind  noun(breeze): wɪnd  |  verb(coil): wInd
 bow   noun(ribbon): bO    |  verb(bend)/ship: bW
 bass  music: bAs          |  fish: bæs
 minute noun(time): mˈɪnᵻt | adj(tiny): mInjˈut
-present noun/adj: pɹˈɛzᵻnt | verb: pɹɪzˈɛnt
-record  noun: ɹˈɛkɹd      | verb: ɹɪkˈɔɹd
+
+## Stress-shift noun→verb pairs  (NOUN = first syllable, VERB = second)
+present  noun/adj: pɹˈɛzᵻnt   | verb: pɹɪzˈɛnt
+record   noun: ɹˈɛkɹd          | verb: ɹɪkˈɔɹd
+produce  noun: pɹˈOdus         | verb: pɹᵻdˈus
+protest  noun: pɹˈOtɛst        | verb: pɹətˈɛst
+progress noun: pɹˈɑɡɹᵻs        | verb: pɹəɡɹˈɛs
+rebel    noun: ɹˈɛbᵻl           | verb: ɹɪbˈɛl
+subject  noun/adj: sˈʌbʤᵻkt    | verb: səbʤˈɛkt
+suspect  noun/adj: sˈʌspᵻkt    | verb: səspˈɛkt
+conflict noun: kˈɑnflɪkt        | verb: kənflˈɪkt
+contract noun: kˈɑntɹækt        | verb: kəntɹˈækt
+contrast noun: kˈɑntɹæst        | verb: kəntɹˈæst
+convert  noun: kˈɑnvɜɹt         | verb: kənvˈɜɹt
+convict  noun: kˈɑnvɪkt         | verb: kənvˈɪkt
+export   noun: ˈɛkspOɹt         | verb: ɛkspˈOɹt
+import   noun: ˈɪmpOɹt          | verb: ɪmpˈOɹt
+insert   noun: ˈɪnsɜɹt          | verb: ɪnsˈɜɹt
+insult   noun: ˈɪnsʌlt          | verb: ɪnsˈʌlt
+transfer noun: tɹˈænsfɜɹ        | verb: tɹænsfˈɜɹ
+survey   noun: sˈɜɹvA           | verb: sɜɹvˈA
+escort   noun: ˈɛskOɹt          | verb: ɪskˈOɹt
+object   noun: ˈɑbʤɛkt          | verb: əbʤˈɛkt
+permit   noun: pˈɜɹmᵻt          | verb: pɜɹmˈɪt
+conduct  noun: kˈɑndʌkt          | verb: kəndˈʌkt
+
+## -ate suffix  (noun/adj = reduced /ɪt/, verb = full /eɪt/)
+graduate  noun/adj: ɡɹˈæʤuᵻt  | verb: ɡɹˈæʤuAt
+separate  noun/adj: sˈɛpɹᵻt    | verb: sˈɛpɹAt
+moderate  noun/adj: mˈɑdɹᵻt    | verb: mˈɑdɹAt
+estimate  noun: ˈɛstᵻmᵻt        | verb: ˈɛstᵻmAt
+advocate  noun: ˈædvᵻkᵻt        | verb: ˈædvᵻkAt
+delegate  noun: dˈɛlᵻɡᵻt        | verb: dˈɛlᵻɡAt
+elaborate adj: ɪlˈæbɹᵻt          | verb: ɪlˈæbɹAt
+
+## -ed suffix  (verb past tense = 1 syllable, adjective = 2 syllables)
+aged      verb: Ajd              | adj(elderly): ˈAjᵻd
+blessed   verb: blɛst            | adj(holy): blˈɛsᵻd
+learned   verb: lɜɹnd            | adj(scholarly): lˈɜɹnᵻd
+dogged    verb: dˈɑɡd            | adj(tenacious): dˈɑɡᵻd
+beloved   verb: bɪlˈʌvd          | adj(literary): bɪlˈʌvᵻd
 """
 
 def show_key():
@@ -718,7 +1091,7 @@ def main():
 Examples:
   kp lead                            All pronunciations of "lead"
   kp "word1" "word2"                 Each word looked up individually
-  kp "sentence"                      **Heteronyms only** (to reduce default output)
+  kp "sentence"                      Heteronyms only (to reduce default output)
   kp "sentence" -A (or --all)        Force ALL words/phrases: pronunciations + POS
   kp "sentence" -H                   Heteronyms only
   kp "sentence" --all -H             All heteronym variants, POS shown
