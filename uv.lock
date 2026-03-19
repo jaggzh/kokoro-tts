@@ -1,6 +1,6 @@
 version = 1
 revision = 3
-requires-python = ">=3.9, <3.13"
+requires-python = ">=3.9, <3.13.6"
 resolution-markers = [
     "python_full_version >= '3.11'",
     "python_full_version == '3.10.*'",
@@ -527,27 +527,27 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/81/db/e655086b7f3a705df045bf0933bdd9c2f79bb3c97bfef1384598bb79a217/keyring-25.7.0-py3-none-any.whl", hash = "sha256:be4a0b195f149690c166e850609a477c532ddbfbaed96a404d4e43f8d5e2689f", size = 39160, upload-time = "2025-11-16T16:26:08.402Z" },
 ]
 
-[[package]]
-name = "kokoro-onnx"
-version = "0.3.9"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "colorlog" },
-    { name = "espeakng-loader" },
-    { name = "librosa" },
-    { name = "numba", version = "0.60.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "numba", version = "0.63.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
-    { name = "numpy", version = "2.0.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "numpy", version = "2.2.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.10.*'" },
-    { name = "numpy", version = "2.3.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
-    { name = "onnxruntime", version = "1.20.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "onnxruntime", version = "1.23.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
-    { name = "phonemizer-fork" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/8c/18/5fc641e0e5176e21f0e62a99a8d61d33b1d6482258bc36c3d5ddb8ab10f4/kokoro_onnx-0.3.9.tar.gz", hash = "sha256:59ac3da5553e5868e4f79e206428e52383590350e884278e0d3bb4951374ffe5", size = 86485, upload-time = "2025-02-05T01:58:36.41Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/4e/1b/953b7f449a1a95f638a1108738144cf733e437fabfbdf2389c7452854363/kokoro_onnx-0.3.9-py3-none-any.whl", hash = "sha256:391818b3512be4eabd157c61c5c796fd1f6c4b5c8ae2bf84e65f011c7826e209", size = 10065, upload-time = "2025-02-05T01:58:34.415Z" },
-]
+# [[package]]
+# name = "kokoro-onnx"
+# version = "0.3.9"
+# source = { registry = "https://pypi.org/simple" }
+# dependencies = [
+#     { name = "colorlog" },
+#     { name = "espeakng-loader" },
+#     { name = "librosa" },
+#     { name = "numba", version = "0.60.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+#     { name = "numba", version = "0.63.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+#     { name = "numpy", version = "2.0.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+#     { name = "numpy", version = "2.2.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.10.*'" },
+#     { name = "numpy", version = "2.3.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
+#     { name = "onnxruntime", version = "1.20.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+#     { name = "onnxruntime", version = "1.23.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+#     { name = "phonemizer-fork" },
+# ]
+# sdist = { url = "https://files.pythonhosted.org/packages/8c/18/5fc641e0e5176e21f0e62a99a8d61d33b1d6482258bc36c3d5ddb8ab10f4/kokoro_onnx-0.3.9.tar.gz", hash = "sha256:59ac3da5553e5868e4f79e206428e52383590350e884278e0d3bb4951374ffe5", size = 86485, upload-time = "2025-02-05T01:58:36.41Z" }
+# wheels = [
+#     { url = "https://files.pythonhosted.org/packages/4e/1b/953b7f449a1a95f638a1108738144cf733e437fabfbdf2389c7452854363/kokoro_onnx-0.3.9-py3-none-any.whl", hash = "sha256:391818b3512be4eabd157c61c5c796fd1f6c4b5c8ae2bf84e65f011c7826e209", size = 10065, upload-time = "2025-02-05T01:58:34.415Z" },
+# ]
 
 [[package]]
 name = "kokoro-tts"
