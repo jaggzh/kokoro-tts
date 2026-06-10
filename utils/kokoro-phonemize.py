@@ -802,7 +802,7 @@ def show_sentence(sentence, heteronyms_only=False, show_all=False, annotate=Fals
       --all -H         — all heteronym variants, POS shown
       [brackets]       — always included regardless of -H
 
-    Deduplication is by (word, chosen_idx) so the same word
+    Bug fix: deduplication is now by (word, chosen_idx) so the same word
     appearing twice with different POS (e.g. "close the door, stand close")
     will be shown twice with its respective resolved pronunciation.
     """
@@ -929,14 +929,37 @@ def show_sentence(sentence, heteronyms_only=False, show_all=False, annotate=Fals
 
     if annotate:
         out.p('Annotated sentence:\n')
-        result = clean
-        for word_text, entry, idx, source, _ in sorted(findings, key=lambda x: -len(x[0])):
-            if entry is not None:
-                misaki = entry.pronunciations[max(idx, 0)].misaki
-            else:
-                misaki = _espeak_fallback(word_text) or '?'
-            replacement = f'[{word_text}](/{misaki}/)'
-            result = re.sub(re.escape(word_text), replacement, result, count=1, flags=re.IGNORECASE)
+        if have_spacy:
+            # Walk the spaCy token list so each occurrence gets its own
+            # POS-resolved pronunciation in a single pass — no regex
+            # substitution means no risk of double-annotating the same word.
+            parts = []
+            for token in doc:
+                w = token.text.lower()
+                entry = _lookup_token(w)
+                if entry is not None:
+                    tidx = _select_index(w, token.pos_, token.tag_)
+                    misaki = entry.pronunciations[max(tidx, 0)].misaki
+                    parts.append(f'[{token.text}](/{misaki}/)' + token.whitespace_)
+                else:
+                    parts.append(token.text_with_ws)
+            result = ''.join(parts).strip()
+        else:
+            # No spaCy: best-effort single-pass, one pronunciation per unique
+            # word (can't disambiguate multiple occurrences without POS).
+            result = clean
+            seen_annotation: set = set()
+            for word_text, entry, idx, source, _ in sorted(findings, key=lambda x: -len(x[0])):
+                w = word_text.lower()
+                if w in seen_annotation:
+                    continue
+                seen_annotation.add(w)
+                if entry is not None:
+                    misaki = entry.pronunciations[max(idx, 0)].misaki
+                else:
+                    misaki = _espeak_fallback(word_text) or '?'
+                replacement = f'[{word_text}](/{misaki}/)'
+                result = re.sub(re.escape(word_text), replacement, result, flags=re.IGNORECASE)
         out.p(f'  {result}\n')
 
 # ---------------------------------------------------------------------------

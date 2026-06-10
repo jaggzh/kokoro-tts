@@ -18,10 +18,22 @@ from ebooklib import epub, ITEM_DOCUMENT
 from bs4 import BeautifulSoup
 import soundfile as sf
 import sounddevice as sd
-from kokoro_onnx.config import SUPPORTED_LANGUAGES # I'm likely going to submit a PR to add a get_languages method
 from kokoro_onnx import Kokoro
 import pymupdf4llm
 import fitz
+
+# https://github.com/espeak-ng/espeak-ng/blob/master/docs/languages.md
+# SUPPORTED_LANGUAGES: This was removed from kokoro_onnx, which we relied on.
+# Rather than attempting to submit a PR trying to put it back in, I'll include
+# it here directly.
+SUPPORTED_LANGUAGES = [
+    "en-us",  # English
+    "en-gb",  # English (British)
+    "fr-fr",  # French
+    "it",  # Italian
+    "ja",  # Japanese
+    "cmn",  # Mandarin Chinese
+]
 
 warnings.filterwarnings("ignore", category=UserWarning, module='ebooklib')
 warnings.filterwarnings("ignore", category=FutureWarning, module='ebooklib')

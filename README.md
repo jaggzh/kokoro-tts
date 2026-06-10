@@ -284,7 +284,7 @@ kokoro-tts --help-languages
 Using: `--phonemes` enables the existing support for a markdown-like syntax to specify pronunication.
 
 - The syntax is: `[unspoken](/*pronunciation text*/)`
-- Eg. `"It was close. It was [close](/klOz/)."`
+- Eg. `"It was close; we had to [close](/klOz/)."`
 
 For assistance with the alphabet, you can use `utils/kokoro-phonemize.py`. It uses the python `spaCy` module for grammar analysis to determine the appropriate pronunciation, including a hard-coded list of known heteronyms (words pronounced differently depending on how they're used in a sentence). `kokoro-phonemize.py` also has a reference available with `--key`.
 
