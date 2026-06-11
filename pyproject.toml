@@ -1,9 +1,9 @@
 [project]
 name = "kokoro-tts"
-version = "2.3.0"
+version = "2.3.1"
 description = "A CLI text-to-speech tool using the Kokoro model, supporting multiple languages, voices (with blending), and various input formats including EPUB books and PDF documents."
 readme = "README.md"
-requires-python = ">=3.9, <3.13.6"
+requires-python = ">=3.11, <3.13.6"
 license = {text = "MIT"}
 authors = [
     {name = "Nazmul Hossain", email = "nazdridoy@gmail.com"}
@@ -15,8 +15,6 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Topic :: Multimedia :: Sound/Audio :: Speech",
@@ -27,6 +25,7 @@ dependencies = [
     "ebooklib>=0.18",
     "kokoro-onnx==0.3.9",
     "pymupdf>=1.25.4",
+    "pymupdf-layout>=1.25.4",
     "pymupdf4llm>=0.0.17",
     "sounddevice>=0.5.1",
     "soundfile>=0.13.0",

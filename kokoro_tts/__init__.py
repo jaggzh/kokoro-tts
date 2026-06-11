@@ -11,6 +11,7 @@ import difflib
 import warnings
 from threading import Event
 import re
+import importlib.metadata
 
 # Third-party imports
 import numpy as np
@@ -221,6 +222,7 @@ Usage: kokoro-tts <input_text_file> [<output_audio_file>] [options]
 
 Commands:
     -h, --help         Show this help message
+    -v, --version      Show the version number
     --help-languages   List all supported languages
     --help-voices      List all available voices
     --merge-chunks     Merge existing chunks in split-output directory into chapter files
@@ -1332,7 +1334,8 @@ def get_valid_options():
         '--debug',
         '--model',
         '--voices',
-        '--phonemes'
+        '--phonemes',
+        '-v', '--version'
     }
 
 
@@ -1372,7 +1375,13 @@ def main():
         sys.exit(1)
     
     # Handle help commands first (before argument parsing)
-    if '--help' in sys.argv or '-h' in sys.argv:
+    if '--version' in sys.argv or '-v' in sys.argv:
+        try:
+            print(f"kokoro-tts version {importlib.metadata.version('kokoro-tts')}")
+        except importlib.metadata.PackageNotFoundError:
+            print("kokoro-tts version unknown (not installed)")
+        sys.exit(0)
+    elif '--help' in sys.argv or '-h' in sys.argv:
         print_usage()
         sys.exit(0)
     elif '--help-languages' in sys.argv:
