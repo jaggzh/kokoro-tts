@@ -789,7 +789,7 @@ def process_chunk_sequential(chunk: str, kokoro: Kokoro, voice: str, speed: floa
             sys.stdout.write("\n")  # Move back to progress line
             sys.stdout.flush()
         
-        samples, sample_rate = kokoro.create(chunk, voice=voice, speed=speed, lang=lang, phonemes=is_phonemes)
+        samples, sample_rate = kokoro.create(chunk, voice=voice, speed=speed, lang=lang, phonemes=chunk)
         return samples, sample_rate
     except Exception as e:
         error_msg = str(e)
