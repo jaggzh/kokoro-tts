@@ -16,6 +16,7 @@ A CLI text-to-speech tool using the Kokoro model, supporting multiple languages,
 - WAV and MP3 output formats
 - Chapter merging capability
 - Detailed debug output option
+- Pronunciation syntax (`--phonemes`)
 - GPU Support
 
 ## Demo
@@ -34,7 +35,7 @@ https://github.com/user-attachments/assets/8413e640-59e9-490e-861d-49187e967526
 
 ## Prerequisites
 
-- Python 3.9-3.12 (Python 3.13+ is not currently supported)
+- Python 3.11-3.12 (Python 3.13+ is not currently supported)
 
 ## Installation
 
@@ -277,6 +278,15 @@ kokoro-tts --help-languages
 - EPUB book input (.epub)
 - Standard input (stdin)
 - Supports piping from other programs
+
+## Manual pronunciation syntax:
+
+Using: `--phonemes` enables the existing support for a markdown-like syntax to specify pronunication.
+
+- The syntax is: `[unspoken](/*pronunciation text*/)`
+- Eg. `"It was close; we had to [close](/klOz/)."`
+
+For assistance with the alphabet, you can use `utils/kokoro-phonemize.py`. It uses the python `spaCy` module for grammar analysis to determine the appropriate pronunciation, including a hard-coded list of known heteronyms (words pronounced differently depending on how they're used in a sentence). `kokoro-phonemize.py` also has a reference available with `--key`.
 
 ## Contributing
 
