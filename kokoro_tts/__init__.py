@@ -789,7 +789,10 @@ def process_chunk_sequential(chunk: str, kokoro: Kokoro, voice: str, speed: floa
             sys.stdout.write("\n")  # Move back to progress line
             sys.stdout.flush()
         
-        samples, sample_rate = kokoro.create(chunk, voice=voice, speed=speed, lang=lang, phonemes=chunk)
+        samples, sample_rate = kokoro.create(
+            chunk, voice=voice, speed=speed, lang=lang,
+            phonemes=chunk if is_phonemes else None
+        )
         return samples, sample_rate
     except Exception as e:
         error_msg = str(e)
@@ -1174,7 +1177,8 @@ async def stream_audio(kokoro, text, voice, speed, lang, debug=False, is_phoneme
         spinner_thread.start()
         
         async for samples, sample_rate in kokoro.create_stream(
-            chunk, voice=voice, speed=speed, lang=lang, is_phonemes=is_phonemes
+            chunk, voice=voice, speed=speed, lang=lang,
+            phonemes=chunk if is_phonemes else None
         ):
             if stop_audio:
                 break
